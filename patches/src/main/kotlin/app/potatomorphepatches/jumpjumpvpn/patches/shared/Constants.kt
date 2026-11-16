@@ -16,7 +16,7 @@ object Constants {
         packageName = "app.jumpjumpvpn.jumpjumpvpn",
         apkFileType = ApkFileType.APK, 
         // Fix: Use String format "#RRGGBB" instead of Int literal
-        appIconColor = 0x2196F3, 
+        appIconColor = 0x2196F3.toInt(),
         targets = listOf(
             AppTarget(
                 version = "3.5.2"
