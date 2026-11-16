@@ -43,6 +43,6 @@ object PurchaseFactoryFingerprint: Fingerprint(
    instruction(Opcode.CONST_4), 
   
     // Filter 5: Look for literal 0
-    literal(0)
+    literal(0, location = MatchAfterImmediately())
    )
 )
