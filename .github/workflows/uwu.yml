@@ -2,17 +2,6 @@ name: Build (Android 8.x / API 26 compat)
 
 on:
   workflow_dispatch:
-    inputs:
-      launcher_patch:
-        description: 'Make the icon open InstagramMainActivity directly (injected into an existing resource patch)'
-        type: choice
-        options: ['on', 'off']
-        default: 'on'
-      pin_min_sdk:
-        description: 'Lower any minSdk above 26 to 26 in the Gradle files (off unless you need it)'
-        type: choice
-        options: ['off', 'on']
-        default: 'off'
 
 jobs:
   build:
@@ -91,7 +80,7 @@ jobs:
       # dist/ holds exactly one file, so the zip has the .mpp at its root.
       - uses: actions/upload-artifact@v4
         with:
-          name: hushgram-api26
+          name: mpp-compiled
           path: dist/*.mpp
           if-no-files-found: error
 
